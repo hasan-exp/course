@@ -1,0 +1,24 @@
+<odoo>
+    
+    <template id="hospital_portal" name="Portal">
+        <t t-call="website.layout">
+            <h1>Hi Odex <t t-esc="person_name" /></h1>
+        </t>
+    </template>
+
+    <template id="hospital_portal_list" name="Portal list">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container">
+                    <ul>
+                        <t t-foreach="objects" t-as="obj">
+                            <li><h1><t t-esc="obj.name" /></h1>  -  <t t-esc="obj.phone" /></li>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+</odoo>

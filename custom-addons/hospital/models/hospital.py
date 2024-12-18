@@ -1,4 +1,20 @@
-from odoo import models, fields
+from odoo import models, fields, api
+
+class Loan(models.Model):
+    _name = "loan.loan"
+
+    name =  fields.Char("Description", required=True)
+    total_amount = fields.Float("Loan Amount", default=1)
+    amount = fields.Float("Installment Amount", default=1)
+    counts = fields.Integer("Installments Counts", default=1)
+
+    @api.onchange('total_amount', 'counts')
+    def on_change_total_amount(self):
+        self.amount  = self.total_amount / self.counts
+
+    @api.onchange('amount')
+    def on_change_amount(self):
+        self.counts  = self.total_amount / self.amount
 
 class Partner(models.Model):
     _inherit = "res.partner"
@@ -6,7 +22,7 @@ class Partner(models.Model):
     is_paitent = fields.Boolean("Mark as Paitent")
     sick_ids = fields.Many2many("hospital.sick", string="Sick History")
 
-
+    
 class HospitalPaitent(models.Model):
     _name = "hospital.paitent"
 

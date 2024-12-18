@@ -1,0 +1,33 @@
+<odoo>
+
+    <record id="wiz_form" model="ir.ui.view">
+        <field name="name">Wiz</field>
+        <field name="model">hospiatal.visit.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                    </group>
+                    <group>
+                        <field name="end_date" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="show_visit" type="object" string="Show" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="visit_wiz_action" model="ir.actions.act_window">
+        <field name="name">visit</field>
+        <field name="res_model">hospiatal.visit.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+
+    <menuitem name="Visiting Report" id="wiz_menu" parent="hospital_root" action="visit_wiz_action"/>
+</odoo>

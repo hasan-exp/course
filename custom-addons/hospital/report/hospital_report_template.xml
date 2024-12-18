@@ -1,0 +1,30 @@
+<odoo>
+
+<template id="hospital_paitent_report">
+ <t t-foreach="docs" t-as="obj">
+    <t t-call="web.external_layout">
+        <style>
+        
+        </style>
+        <center>
+            <table width="80%">
+            <tr>
+                <th>Name</th>
+                <td><t t-esc="obj.name" /></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td><t t-esc="obj.phone" /></td>
+            </tr>
+            <tr>
+                <th>last visit</th>
+                <td><t t-esc="obj.last_visit" /></td>
+            </tr>
+        </table>
+        </center>
+        
+    </t>
+</t>
+</template>
+
+</odoo>

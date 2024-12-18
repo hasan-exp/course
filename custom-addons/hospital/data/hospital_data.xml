@@ -1,0 +1,22 @@
+<odoo>
+<data>
+
+<record id="paitent_asmaa" model="hospital.paitent">
+    <field name="name">Asmaa Mubarak</field>
+    <field name="phone">02222222222</field>
+</record>
+
+<record id="paitent_sultan" model="hospital.paitent">
+    <field name="name">Sultan</field>
+    <field name="phone">03333333333</field>
+</record>
+
+<record id="paitent_wafa" model="hospital.paitent">
+    <field name="name">وفااااااء</field>
+    <field name="phone">0444444</field>
+</record>
+
+
+</data>
+
+</odoo>

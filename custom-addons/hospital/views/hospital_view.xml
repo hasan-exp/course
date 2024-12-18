@@ -48,7 +48,7 @@
                             <field name="phone" required="1" />
                         </group>
                         <group>
-                            <field name="last_visit" readonly="1"/>
+                            <field name="last_visit" />
                             <field name="note" />
                         </group>
                     </group>
@@ -83,8 +83,17 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="Hospital" id="hospital_root" />
+    <record id="loan_action" model="ir.actions.act_window">
+        <field name="name">Loans</field>
+        <field name="res_model">loan.loan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Hospital" id="hospital_root" groups="hospital.hospital_admin,hospital_user" />
     <menuitem name="Paitents" id="paitent_menu" parent="hospital_root" action="hospital_paitent_action"/>
-    <menuitem name="Docotrs" id="doctor_menu" parent="hospital_root" action="hospital_doctor_action"/>
-    
+    <menuitem name="Docotrs" id="doctor_menu" groups="hospital_admin" parent="hospital_root" action="hospital_doctor_action"/>
+    <menuitem name="Loans" id="loan_menu" parent="hospital_root" action="loan_action"/>
+
+
 </odoo>

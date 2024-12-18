@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="0">
+    <record id="hospital_user" model="res.groups">
+        <field name="name">Hospital User</field>
+    </record>
+
+    <record id="hospital_admin" model="res.groups">
+        <field name="name">Hospital Admin</field>
+    </record>
+</data>
+
+</odoo>

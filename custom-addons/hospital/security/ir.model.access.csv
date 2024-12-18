@@ -1,2 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-hospital_paitent_access,hospital_paitent_access,model_hospital_paitent,,1,1,1,1
+hospital_paitent_access,hospital paitent access,model_hospital_paitent,hospital_admin,1,1,1,1
+hospital_doctor_access,hospital_doctor_access,model_hospital_doctor,,1,1,1,1
+hospital_visit_access,hospital_visit_access,model_hospital_visit,,1,1,1,1
+hospital_position_access,hospital_postion_access,model_hospital_position,,1,1,1,1
+hospital_sick_access,hospital_sick_access,model_hospital_sick,,1,1,1,1
+hospital_paitent_access_user,hospital paitent access user,model_hospital_paitent,hospital_user,1,0,0,0
